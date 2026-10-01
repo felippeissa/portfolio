@@ -7,53 +7,84 @@
   <meta name="description" content="Portfólio de Seu Nome">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ EDITE SÓ AQUI: seus dados ============ -->
+  <!-- Fundo fixo: a cor muda sozinha conforme o projeto na tela -->
+  <div class="bg" id="bg"></div>
 
   <nav class="top">
     <a href="https://www.linkedin.com/in/SEU-USUARIO/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="mailto:seu@email.com">Email</a>
   </nav>
 
-  <header class="hero">
-    <p class="name">Seu Nome</p>
-    <h1>Seu cargo ou<br>especialidade em Sua Cidade.</h1>
+  <!-- Indicador fixo "Work" + linha que cresce ao rolar -->
+  <div class="work-indicator" id="indicator">
+    <span>Trabalho</span>
+    <i><b id="progress"></b></i>
+  </div>
+
+  <!-- ============ EDITE SÓ AQUI: seus dados ============ -->
+
+  <header class="hero" data-bg="#000000">
+    <p class="name anim-up">Seu Nome</p>
+    <h1 class="title big">
+      <span class="line"><span>Seu cargo ou</span></span>
+      <span class="line"><span>especialidade em Sua Cidade.</span></span>
+    </h1>
   </header>
 
-  <section class="work">
-    <p class="label">Trabalho</p>
-    <h2>Frase de destaque sobre o que você faz hoje, na empresa atual.</h2>
+  <main>
+    <!--
+      Para adicionar um projeto/experiência: copie um bloco <section class="project"> inteiro.
+      data-bg = cor de fundo que aparece quando esse projeto está na tela.
+      Dentro de .media troque o <div class="placeholder"> por:
+        <img src="assets/foto.jpg" alt="">
+        ou <video src="assets/video.mp4" autoplay muted loop playsinline></video>
+    -->
 
-    <!-- Para adicionar uma experiência, copie um bloco <article class="job"> inteiro -->
-    <article class="job">
-      <p class="years">2022 – Hoje</p>
-      <h3>Empresa Atual</h3>
-      <p class="tag">Projeto ou área</p>
-      <p class="desc">Descreva em uma ou duas frases o que você fez e o impacto.</p>
-    </article>
+    <section class="project" data-bg="#000000">
+      <div class="intro">
+        <p class="year">2022 – Hoje</p>
+        <h2 class="title">
+          <span class="line"><span>Empresa Atual</span></span>
+          <span class="line sub"><span>Projeto ou área</span></span>
+        </h2>
+        <p class="desc">Descreva em uma ou duas frases o que você fez e o impacto.</p>
+      </div>
+      <div class="media"><div class="placeholder"></div></div>
+    </section>
 
-    <article class="job">
-      <p class="years">2019 – 2022</p>
-      <h3>Empresa Anterior</h3>
-      <p class="tag">Clientes ou projetos</p>
-      <p class="desc">Descreva em uma ou duas frases o que você fez e o impacto.</p>
-    </article>
+    <section class="project" data-bg="#1c1c1c">
+      <div class="intro">
+        <p class="year">2019 – 2022</p>
+        <h2 class="title">
+          <span class="line"><span>Empresa Anterior</span></span>
+          <span class="line sub"><span>Projeto ou área</span></span>
+        </h2>
+        <p class="desc">Descreva em uma ou duas frases o que você fez e o impacto.</p>
+      </div>
+      <div class="media"><div class="placeholder"></div></div>
+    </section>
 
-    <article class="job">
-      <p class="years">2017 – 2019</p>
-      <h3>Primeira Empresa</h3>
-      <p class="tag">Clientes ou projetos</p>
-      <p class="desc">Descreva em uma ou duas frases o que você fez e o impacto.</p>
-    </article>
-  </section>
+    <section class="project" data-bg="#2f2f2f">
+      <div class="intro">
+        <p class="year">2017 – 2019</p>
+        <h2 class="title">
+          <span class="line"><span>Primeira Empresa</span></span>
+          <span class="line sub"><span>Clientes ou projetos</span></span>
+        </h2>
+        <p class="desc">Descreva em uma ou duas frases o que você fez e o impacto.</p>
+      </div>
+      <div class="media"><div class="placeholder"></div></div>
+    </section>
+  </main>
 
-  <footer>
-    <p class="thanks">Obrigado</p>
-    <a href="mailto:seu@email.com">seu@email.com</a>
+  <footer class="thanks-block" data-bg="#000000">
+    <h2 class="title big"><span class="line"><span>Obrigado</span></span></h2>
+    <a class="link-thanks" href="mailto:seu@email.com">seu@email.com</a>
   </footer>
 
   <!-- ============ FIM da área de edição ============ -->
