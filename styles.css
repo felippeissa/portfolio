@@ -230,6 +230,7 @@ a:hover { color: var(--muted); }
 /* ---------- sobre ---------- */
 .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 24px var(--pad); }
 .about-grid .kicker { font-family: "IBM Plex Sans", sans-serif; font-weight: 300; color: var(--muted); font-size: 22px; }
+.about-body p strong { color: var(--fg); font-weight: 500; }
 .about-body p { font-family: "IBM Plex Sans", sans-serif; font-weight: 300; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.6; color: var(--body); max-width: 60ch; margin-top: 28px; }
 .numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--pad); margin-top: 16vh; }
 .numbers div { border-top: 1px solid var(--rule); padding-top: 22px; }
