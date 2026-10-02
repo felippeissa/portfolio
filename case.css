@@ -17,25 +17,25 @@
 .facts dd { font-size: 18px; line-height: 1.5; }
 
 /* capítulos da história */
-.chapter { display: grid; grid-template-columns: 1fr 2fr; column-gap: var(--pad); padding: 12vh var(--pad); border-top: 1px solid #1f1f1f; }
+.chapter { display: grid; grid-template-columns: 1fr 2fr; column-gap: var(--pad); padding: 12vh var(--pad); border-top: 1px solid var(--rule); }
 .chapter .num { font-family: "IBM Plex Sans", sans-serif; font-weight: 300; color: var(--muted); font-size: 22px; }
 .chapter h2 { font-size: clamp(32px, 4.4vw, 60px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 32px; }
 .chapter p { font-family: "IBM Plex Sans", sans-serif; font-weight: 300; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.6;
-  color: #cfcfcf; max-width: 60ch; margin-bottom: 20px; }
+  color: var(--body); max-width: 60ch; margin-bottom: 20px; }
 .chapter ul { list-style: none; margin: 8px 0 20px; }
 .chapter li { font-family: "IBM Plex Sans", sans-serif; font-weight: 300; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.6;
-  color: #cfcfcf; padding-left: 28px; position: relative; max-width: 60ch; }
+  color: var(--body); padding-left: 28px; position: relative; max-width: 60ch; }
 .chapter li::before { content: "—"; position: absolute; left: 0; color: var(--muted); }
 .chapter figure { margin-top: 40px; }
 .chapter figure img { width: 100%; border-radius: 12px; display: block; }
 .chapter figcaption { color: var(--muted); font-size: 14px; margin-top: 12px; }
 
 /* números de impacto */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--pad); padding: 14vh var(--pad); border-top: 1px solid #1f1f1f; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--pad); padding: 14vh var(--pad); border-top: 1px solid var(--rule); }
 .stats b { display: block; font-size: clamp(44px, 6vw, 88px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
 .stats span { display: block; color: var(--muted); margin-top: 12px; font-size: 16px; }
 
-.next { padding: 20vh var(--pad); border-top: 1px solid #1f1f1f; }
+.next { padding: 20vh var(--pad); border-top: 1px solid var(--rule); }
 .next p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
 .next a { font-size: clamp(36px, 6vw, 84px); font-weight: 700; letter-spacing: -0.03em; }
 
@@ -44,6 +44,7 @@
 .reveal-block.in-view { opacity: 1; transform: none; }
 
 @media (max-width: 640px) {
+  .back { top: 38px; }
   .facts, .stats { grid-template-columns: 1fr 1fr; }
   .chapter { grid-template-columns: 1fr; row-gap: 16px; }
   .case-media { padding: 0; }
