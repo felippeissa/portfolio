@@ -12,14 +12,14 @@ const reveal = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 
-document.querySelectorAll('.hero, .intro, .media, .thanks-block, .anim-up, .title')
+document.querySelectorAll('.hero, .intro, .media, .thanks-block, .anim-up, .title, .reveal-block')
   .forEach(el => reveal.observe(el));
 
 // 2) Fundo fixo: cor muda conforme a seção que está no centro da tela
 const sections = [...document.querySelectorAll('[data-bg]')];
 const colorObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) bg.style.backgroundColor = e.target.dataset.bg;
+    if (e.isIntersecting && bg) bg.style.backgroundColor = e.target.dataset.bg;
   });
 }, { rootMargin: '-45% 0px -45% 0px' });
 sections.forEach(s => colorObserver.observe(s));
@@ -30,12 +30,13 @@ const medias = [...document.querySelectorAll('.media img, .media video, .placeho
 
 function onScroll() {
   const vh = innerHeight;
-  const r = work.getBoundingClientRect();
-  const visible = r.top < vh * 0.4 && r.bottom > vh * 0.6;
-  indicator.classList.toggle('show', visible);
-
-  const p = Math.min(1, Math.max(0, (vh * 0.4 - r.top) / (r.height - vh * 0.2)));
-  progress.style.transform = `scaleY(${p})`;
+  if (work && indicator && progress) {
+    const r = work.getBoundingClientRect();
+    const visible = r.top < vh * 0.4 && r.bottom > vh * 0.6;
+    indicator.classList.toggle('show', visible);
+    const p = Math.min(1, Math.max(0, (vh * 0.4 - r.top) / (r.height - vh * 0.2)));
+    progress.style.transform = `scaleY(${p})`;
+  }
 
   medias.forEach(m => {
     const mr = m.getBoundingClientRect();
@@ -46,3 +47,15 @@ function onScroll() {
 addEventListener('scroll', onScroll, { passive: true });
 addEventListener('resize', onScroll);
 onScroll();
+
+// 4) Mídia clicável: selo "Ver projeto" segue o mouse
+document.querySelectorAll('.media-link').forEach(link => {
+  const move = (e) => {
+    const r = link.getBoundingClientRect();
+    link.style.setProperty('--cx', `${e.clientX - r.left}px`);
+    link.style.setProperty('--cy', `${e.clientY - r.top}px`);
+  };
+  link.addEventListener('mouseenter', (e) => { move(e); link.classList.add('hovering'); });
+  link.addEventListener('mousemove', move);
+  link.addEventListener('mouseleave', () => link.classList.remove('hovering'));
+});
