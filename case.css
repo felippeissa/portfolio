@@ -12,7 +12,7 @@
 .case-media video, .case-media img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; }
 
 /* ficha técnica */
-.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--pad); padding: 0 var(--pad); margin-bottom: 18vh; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--pad); padding: 0 var(--pad); margin-bottom: 18vh; }
 .facts dt { color: var(--muted); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; }
 .facts dd { font-size: 18px; line-height: 1.5; }
 
