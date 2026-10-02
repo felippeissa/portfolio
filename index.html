@@ -4,22 +4,50 @@
   <meta charset="utf-8">
   <script>try{var s=localStorage,t=s.getItem("theme"),l=s.getItem("lang");if(t)document.documentElement.dataset.theme=t;if(l==="en")document.documentElement.lang="en"}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Felipe Santiago</title>
-  <meta name="description" content="Felipe Santiago – Senior Product Designer" data-pt-content="Felipe Santiago – Senior Product Designer" data-en-content="Felipe Santiago – Senior Product Designer in Design Systems, based in Goiânia, Brazil">
+  <title data-en="Felipe Santiago — Senior Product Designer">Felipe Santiago — Senior Product Designer</title>
+  <meta name="description" content="Senior Product Designer em Goiânia. Design Systems, acessibilidade e produtos digitais para governo, fintech e saúde." data-pt-content="Senior Product Designer em Goiânia. Design Systems, acessibilidade e produtos digitais para governo, fintech e saúde." data-en-content="Senior Product Designer based in Goiânia, Brazil. Design Systems, accessibility and digital products for government, fintech and healthcare.">
+  <link rel="canonical" href="https://felippeissa.github.io/portfolio/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Compartilhamento (LinkedIn, WhatsApp etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Felipe Santiago">
+  <meta property="og:title" content="Felipe Santiago — Senior Product Designer">
+  <meta property="og:description" content="Design Systems, acessibilidade e produtos digitais para governo, fintech e saúde.">
+  <meta property="og:url" content="https://felippeissa.github.io/portfolio/">
+  <meta property="og:image" content="https://felippeissa.github.io/portfolio/assets/informatiza-ds-poster.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Felipe Santiago",
+    "jobTitle": "Senior Product Designer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Goiânia", "addressRegion": "GO", "addressCountry": "BR" },
+    "email": "mailto:contato.issafe@gmail.com",
+    "url": "https://felippeissa.github.io/portfolio/",
+    "sameAs": ["https://www.linkedin.com/in/thesantiagoux", "https://github.com/felippeissa", "https://www.behance.net/thesantiagoux"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
+  <a class="skip" href="#trabalho" data-en="Skip to work">Pular para os trabalhos</a>
 
-  <!-- Fundo fixo: a cor muda sozinha conforme o projeto na tela -->
+  <!-- Fundo fixo: a cor muda sozinha conforme a seção na tela -->
   <div class="bg" id="bg"></div>
 
-  <nav class="top">
+  <nav class="top" aria-label="Principal" data-pt-label="Principal" data-en-label="Main">
     <a href="https://www.linkedin.com/in/thesantiagoux" target="_blank" rel="noopener">LinkedIn</a>
     <a href="mailto:contato.issafe@gmail.com">Email</a>
-      <span class="sep" aria-hidden="true"></span>
+    <span class="sep" aria-hidden="true"></span>
     <div class="ctrl" role="group" aria-label="Tema" data-en-label="Theme" data-pt-label="Tema">
       <button class="ctrl-btn" type="button" data-theme-set="light" aria-pressed="false" aria-label="Tema claro" data-en-label="Light theme" data-pt-label="Tema claro" title="Tema claro"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <button class="ctrl-btn" type="button" data-theme-set="dark" aria-pressed="true" aria-label="Tema escuro" data-en-label="Dark theme" data-pt-label="Tema escuro" title="Tema escuro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg></button>
@@ -30,68 +58,70 @@
     </div>
   </nav>
 
-  <!-- Indicador fixo "Work" + linha que cresce ao rolar -->
-  <div class="work-indicator" id="indicator">
+  <!-- Indicador fixo "Trabalho" + linha que cresce ao rolar -->
+  <div class="work-indicator" id="indicator" aria-hidden="true">
     <span data-en="Work">Trabalho</span>
     <i><b id="progress"></b></i>
   </div>
 
-  <!-- ============ EDITE SÓ AQUI: seus dados ============ -->
+  <!-- ============ EDITE A PARTIR DAQUI ============
+       Cada texto em português tem a versão em inglês no atributo data-en="..." logo ao lado.
+       Ao mudar um texto, atualize os dois. -->
 
-  <header class="hero" data-bg="#000000">
+  <header class="hero" id="top" data-bg="#000000">
     <p class="name anim-up">Felipe Santiago</p>
     <h1 class="title big">
       <span class="line"><span>Senior Product Designer</span></span>
       <span class="line"><span data-en="in Design Systems, from Goiânia, Brazil.">em Design Systems, de Goiânia.</span></span>
     </h1>
+    <p class="hero-lead anim-up d1" data-en="I design accessible, scalable digital products for government, fintech and healthcare.">Desenho produtos digitais acessíveis e escaláveis para governo, fintech e saúde.</p>
+    <div class="hero-meta anim-up d2">
+      <span data-en="&lt;b&gt;UX/UI&lt;/b&gt; since 2020"><b>UX/UI</b> desde 2020</span>
+      <span data-en="&lt;b&gt;Design Systems&lt;/b&gt; &amp; accessibility"><b>Design Systems</b> e acessibilidade</span>
+      <span data-en="&lt;b&gt;Computer Science&lt;/b&gt; background"><b>Ciência da Computação</b> como base</span>
+    </div>
   </header>
 
   <main id="trabalho">
+    <div class="work-head" data-bg="#000000">
+      <div class="section-label reveal-block"><b data-en="Selected work">Trabalhos selecionados</b><span>(04)</span></div>
+    </div>
+
     <!--
-      Para adicionar um projeto: copie um bloco <section class="project"> inteiro.
-      data-bg = cor de fundo quando esse projeto está na tela.
-      Troque <div class="placeholder"> por <img src="assets/foto.jpg" alt="">
-      ou <video src="assets/video.mp4" autoplay muted loop playsinline></video>
+      PROJETOS: cada um é um bloco <section class="project">. Para trocar um projeto,
+      substitua o bloco inteiro. O link da mídia (href) leva à página do case em projetos/.
+      Para usar uma imagem real no lugar da capa ilustrada, troque o <div class="cover ...">
+      por <img src="assets/sua-imagem.jpg" alt="Descrição"> ou por um <video ...>.
     -->
 
     <section class="project" data-bg="#000000">
       <div class="intro">
-        <p class="year">2024 – 2026</p>
+        <p class="year">2025 – 2026</p>
         <h2 class="title">
-          <span class="line"><span>Montreal</span></span>
-          <span class="line sub"><span data-en="Government of Goiás">Governo de Goiás</span></span>
+          <span class="line"><span>Informatiza 3.0</span></span>
+          <span class="line sub"><span data-en="Design System · Government of Goiás">Design System · Governo de Goiás</span></span>
         </h2>
-        <p class="desc" data-en="Design of public digital services (AssinaGO, SISLOG, Portal Goiás) and Design System governance in Figma.">Design de serviços digitais públicos (AssinaGO, SISLOG, Portal Goiás) e governança do Design System no Figma.</p>
+        <p class="desc" data-en="An institutional Design System that aligns Figma, components, accessibility and code across the State's digital services.">Um Design System institucional que alinha Figma, componentes, acessibilidade e código nos serviços digitais do Estado.</p>
       </div>
-      <!-- Mídia clicável: leva para a página do case. Copie esse padrão (a.media.media-link) para outros projetos. -->
-      <a class="media media-link" href="projetos/informatiza.html" aria-label="Ver projeto: Design System Informatiza 3.0" data-pt-label="Ver projeto: Design System Informatiza 3.0" data-en-label="View project: Informatiza 3.0 Design System">
-        <video src="assets/informatiza-ds.mp4" poster="assets/informatiza-ds-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+      <a class="media media-link" href="projetos/informatiza.html" aria-label="Ver projeto: Informatiza 3.0" data-pt-label="Ver projeto: Informatiza 3.0" data-en-label="View project: Informatiza 3.0">
+        <video src="assets/informatiza-ds.mp4" poster="assets/informatiza-ds-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
         <span class="view-cursor" aria-hidden="true"><span data-en="View project">Ver projeto</span> <i>→</i></span>
       </a>
     </section>
 
-    <section class="project" data-bg="#1c1c1c">
+    <section class="project" data-bg="#141414">
       <div class="intro">
-        <p class="year">2025</p>
+        <p class="year">2024 – 2026</p>
         <h2 class="title">
-          <span class="line"><span>Brasil Card</span></span>
-          <span class="line sub"><span>Agile – Dinheiro na Hora</span></span>
+          <span class="line"><span>Portal Goiás</span></span>
+          <span class="line sub"><span data-en="UX strategy · Information architecture">Estratégia de UX · Arquitetura da informação</span></span>
         </h2>
-        <p class="desc" data-en="Redesign of the credit app and structuring of the Flex Design System.">Redesign do app de crédito e estruturação do Flex Design System.</p>
+        <p class="desc" data-en="Redesigning the State's main portal so citizens can find, understand and access public services.">Redesenho do principal portal do Estado para o cidadão encontrar, entender e acessar serviços públicos.</p>
       </div>
-      <div class="media"><div class="placeholder"></div></div>
-    </section>
-
-    <section class="project" data-bg="#2f2f2f">
-      <div class="intro">
-        <p class="year">2024</p>
-        <h2 class="title">
-          <span class="line"><span>Americas Health</span></span>
-          <span class="line sub"><span>Austa Clínicas, Austa Sign</span></span>
-        </h2>
-        <p class="desc" data-en="Web and mobile experiences for scheduling, care and digital signature.">Experiências web e mobile para agendamento, atendimento e assinatura digital.</p>
-      </div>
-      <div class="media"><div class="placeholder"></div></div>
+      <a class="media media-link" href="projetos/portal-goias.html" aria-label="Ver projeto: Portal Goiás" data-pt-label="Ver projeto: Portal Goiás" data-en-label="View project: Portal Goiás">
+        <div class="cover cover--portal"><span class="c-tags" data-en="GovTech · Information architecture">GovTech · Arquitetura da informação</span><span class="c-art"><svg viewBox="0 0 460 340" aria-hidden="true"><g fill="none" stroke="rgba(255,255,255,.38)" stroke-width="1.5" stroke-linecap="round"><path class="c-draw" d="M230 92V120H80V150M230 120H180V150M230 120H280V150M230 120H380V150"/><path class="c-draw" d="M80 186V212H50V236M80 212H110V236M180 186V236M280 186V212H255V236M280 212H305V236M380 186V212H355V236M380 212H405V236"/></g><g class="c-float"><rect x="110" y="18" width="240" height="46" rx="23" fill="#fff"/><circle cx="138" cy="40" r="8" fill="none" stroke="#0b2545" stroke-width="2.6"/><path d="M144 46l7 7" stroke="#0b2545" stroke-width="2.6" stroke-linecap="round"/><rect x="162" y="37" width="128" height="8" rx="4" fill="#0b2545" opacity=".22"/><rect x="300" y="28" width="38" height="26" rx="13" fill="#ffd166"/></g><rect x="200" y="74" width="60" height="18" rx="9" fill="#ffd166"/><g><rect x="35" y="150" width="90" height="36" rx="10" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/><rect x="51" y="165" width="58" height="6" rx="3" fill="rgba(255,255,255,.7)"/></g><g><rect x="135" y="150" width="90" height="36" rx="10" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/><rect x="151" y="165" width="52" height="6" rx="3" fill="rgba(255,255,255,.7)"/></g><g><rect x="235" y="150" width="90" height="36" rx="10" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/><rect x="251" y="165" width="46" height="6" rx="3" fill="rgba(255,255,255,.7)"/></g><g><rect x="335" y="150" width="90" height="36" rx="10" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/><rect x="351" y="165" width="40" height="6" rx="3" fill="rgba(255,255,255,.7)"/></g><circle cx="50" cy="246" r="8" fill="#8ecae6" class="c-pulse"/><circle cx="110" cy="246" r="8" fill="#8ecae6" class="c-pulse d2"/><circle cx="180" cy="246" r="8" fill="#8ecae6" class="c-pulse d3"/><circle cx="255" cy="246" r="8" fill="#8ecae6" class="c-pulse"/><circle cx="305" cy="246" r="17" fill="none" stroke="#ffd166" stroke-width="1.5" class="c-pulse"/><circle cx="305" cy="246" r="9" fill="#ffd166"/><circle cx="355" cy="246" r="8" fill="#8ecae6" class="c-pulse d3"/><circle cx="405" cy="246" r="8" fill="#8ecae6" class="c-pulse"/><rect x="255" y="282" width="100" height="8" rx="4" fill="rgba(255,255,255,.25)"/><rect x="270" y="298" width="70" height="8" rx="4" fill="rgba(255,255,255,.15)"/></svg></span><span class="c-title">Portal Goiás<small data-en="Public services that are easier to find">Serviços públicos mais fáceis de encontrar</small></span></div>
+        <span class="view-cursor" aria-hidden="true"><span data-en="View project">Ver projeto</span> <i>→</i></span>
+      </a>
     </section>
 
     <section class="project" data-bg="#1c1c1c">
@@ -99,34 +129,200 @@
         <p class="year">2023 – 2024</p>
         <h2 class="title">
           <span class="line"><span>FitBank</span></span>
-          <span class="line sub"><span>Design System, Pix, EasyCrédito</span></span>
+          <span class="line sub"><span data-en="Corporate Design System · Fintech">Design System corporativo · Fintech</span></span>
         </h2>
-        <p class="desc" data-en="Leadership of the corporate Design System and payment journeys.">Liderança do Design System corporativo e jornadas de pagamentos.</p>
+        <p class="desc" data-en="A shared foundation of tokens, components and patterns for multiple financial products and squads.">Uma base compartilhada de tokens, componentes e padrões para vários produtos financeiros e squads.</p>
       </div>
-      <div class="media"><div class="placeholder"></div></div>
+      <a class="media media-link" href="projetos/fitbank.html" aria-label="Ver projeto: FitBank" data-pt-label="Ver projeto: FitBank" data-en-label="View project: FitBank">
+        <div class="cover cover--fitbank"><span class="c-tags" data-en="Fintech · Design System">Fintech · Design System</span><span class="c-art"><svg viewBox="0 0 460 340" aria-hidden="true"><rect x="26" y="22" width="58" height="58" rx="12" fill="#f5f3ff" opacity="1"/><rect x="96" y="22" width="58" height="58" rx="12" fill="#ddd6fe" opacity="1"/><rect x="166" y="22" width="58" height="58" rx="12" fill="#c4b5fd" opacity="1"/><rect x="236" y="22" width="58" height="58" rx="12" fill="#a78bfa" opacity="1"/><rect x="306" y="22" width="58" height="58" rx="12" fill="#7c3aed" opacity="1" class="c-pulse"/><rect x="376" y="22" width="58" height="58" rx="12" fill="#4c1d95" opacity="1"/><rect x="26" y="92" width="58" height="58" rx="12" fill="#f5f3ff" opacity="0.78"/><rect x="96" y="92" width="58" height="58" rx="12" fill="#ddd6fe" opacity="0.78"/><rect x="166" y="92" width="58" height="58" rx="12" fill="#c4b5fd" opacity="0.78"/><rect x="236" y="92" width="58" height="58" rx="12" fill="#a78bfa" opacity="0.78"/><rect x="306" y="92" width="58" height="58" rx="12" fill="#7c3aed" opacity="0.78"/><rect x="376" y="92" width="58" height="58" rx="12" fill="#4c1d95" opacity="0.78"/><rect x="26" y="162" width="58" height="58" rx="12" fill="#f5f3ff" opacity="0.56"/><rect x="96" y="162" width="58" height="58" rx="12" fill="#ddd6fe" opacity="0.56" class="c-pulse"/><rect x="166" y="162" width="58" height="58" rx="12" fill="#c4b5fd" opacity="0.56"/><rect x="236" y="162" width="58" height="58" rx="12" fill="#a78bfa" opacity="0.56"/><rect x="306" y="162" width="58" height="58" rx="12" fill="#7c3aed" opacity="0.56"/><rect x="376" y="162" width="58" height="58" rx="12" fill="#4c1d95" opacity="0.56"/><rect x="26" y="232" width="58" height="58" rx="12" fill="#f5f3ff" opacity="0.34"/><rect x="96" y="232" width="58" height="58" rx="12" fill="#ddd6fe" opacity="0.34"/><rect x="166" y="232" width="58" height="58" rx="12" fill="#c4b5fd" opacity="0.34"/><rect x="236" y="232" width="58" height="58" rx="12" fill="#a78bfa" opacity="0.34"/><rect x="306" y="232" width="58" height="58" rx="12" fill="#7c3aed" opacity="0.34"/><rect x="376" y="232" width="58" height="58" rx="12" fill="#4c1d95" opacity="0.34"/><g class="c-float d2"><rect x="214" y="196" width="226" height="128" rx="18" fill="#fff"/><rect x="236" y="218" width="110" height="10" rx="5" fill="#1e1446" opacity=".85"/><rect x="236" y="238" width="160" height="8" rx="4" fill="#1e1446" opacity=".25"/><rect x="236" y="274" width="104" height="32" rx="10" fill="#7c3aed"/><rect x="254" y="286" width="68" height="8" rx="4" fill="#fff"/><rect x="364" y="279" width="50" height="24" rx="12" fill="#7c3aed"/><circle cx="402" cy="291" r="9" fill="#fff"/></g><g class="c-float d3"><rect x="40" y="250" width="140" height="44" rx="12" fill="#1e1446" stroke="#a78bfa" stroke-width="1.5"/><circle cx="64" cy="272" r="8" fill="#a78bfa"/><rect x="82" y="268" width="80" height="8" rx="4" fill="#ddd6fe"/></g></svg></span><span class="c-title">FitBank<small data-en="Multi-product Design System">Design System multiproduto</small></span></div>
+        <span class="view-cursor" aria-hidden="true"><span data-en="View project">Ver projeto</span> <i>→</i></span>
+      </a>
     </section>
 
-    <section class="project" data-bg="#000000">
+    <section class="project" data-bg="#141414">
       <div class="intro">
-        <p class="year">2021 – 2023</p>
+        <p class="year">2024</p>
         <h2 class="title">
-          <span class="line"><span>Gauge</span></span>
-          <span class="line sub"><span>Itaú, Vivo, ApexBrasil, Goodyear</span></span>
+          <span class="line"><span>Austa Clínicas</span></span>
+          <span class="line sub"><span data-en="Healthcare ecosystem · Mobile &amp; web">Ecossistema de saúde · Mobile e web</span></span>
         </h2>
-        <p class="desc" data-en="Research, journeys and prototypes for web and mobile products of major brands.">Pesquisa, jornadas e protótipos para produtos web e mobile de grandes marcas.</p>
+        <p class="desc" data-en="Scheduling, consultations and digital signatures connected in one journey for patients and staff.">Agendamento, consulta e assinatura digital conectados em uma só jornada para pacientes e equipe.</p>
       </div>
-      <div class="media"><div class="placeholder"></div></div>
+      <a class="media media-link" href="projetos/austa-clinicas.html" aria-label="Ver projeto: Austa Clínicas" data-pt-label="Ver projeto: Austa Clínicas" data-en-label="View project: Austa Clínicas">
+        <div class="cover cover--austa"><span class="c-tags" data-en="Healthcare · Mobile & web">Saúde · Mobile e web</span><span class="c-art"><svg viewBox="0 0 460 340" aria-hidden="true"><rect x="10" y="30" width="200" height="200" rx="16" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/><rect x="30" y="50" width="90" height="10" rx="5" fill="rgba(255,255,255,.8)"/><circle cx="38" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="62" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="86" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="110" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="134" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="158" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="182" cy="92" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="38" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="62" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="86" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="110" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="134" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="158" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="182" cy="120" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="38" cy="148" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="62" cy="148" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="86" cy="148" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="110" cy="148" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="134" cy="148" r="16" fill="none" stroke="#5eead4" stroke-width="1.5" class="c-pulse"/><circle cx="134" cy="148" r="10" fill="#5eead4"/><circle cx="158" cy="148" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="182" cy="148" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="38" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="62" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="86" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="110" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="134" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="158" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="182" cy="176" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="38" cy="204" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="62" cy="204" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="86" cy="204" r="3.5" fill="rgba(255,255,255,0.75)"/><circle cx="110" cy="204" r="3.5" fill="rgba(255,255,255,0.3)"/><circle cx="134" cy="204" r="3.5" fill="rgba(255,255,255,0.3)"/><circle cx="158" cy="204" r="3.5" fill="rgba(255,255,255,0.3)"/><circle cx="182" cy="204" r="3.5" fill="rgba(255,255,255,0.3)"/><g class="c-float"><rect x="236" y="30" width="214" height="56" rx="14" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/><circle cx="264" cy="58" r="13" fill="rgba(255,255,255,.35)"/><rect x="288" y="48" width="110" height="8" rx="4" fill="rgba(255,255,255,.7)" opacity=".9"/><rect x="288" y="63" width="70" height="7" rx="3.5" fill="rgba(255,255,255,.7)" opacity=".4"/><rect x="410" y="50" width="26" height="16" rx="8" fill="rgba(255,255,255,.2)"/></g><g class="c-float d2"><rect x="236" y="100" width="214" height="56" rx="14" fill="#fff" stroke="rgba(255,255,255,.35)" stroke-width="0"/><circle cx="264" cy="128" r="13" fill="#0f766e"/><rect x="288" y="118" width="96" height="8" rx="4" fill="#06343a" opacity=".9"/><rect x="288" y="133" width="70" height="7" rx="3.5" fill="#06343a" opacity=".4"/><rect x="410" y="120" width="26" height="16" rx="8" fill="#5eead4"/></g><g class="c-float d3"><rect x="236" y="170" width="214" height="56" rx="14" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/><circle cx="264" cy="198" r="13" fill="rgba(255,255,255,.35)"/><rect x="288" y="188" width="82" height="8" rx="4" fill="rgba(255,255,255,.7)" opacity=".9"/><rect x="288" y="203" width="70" height="7" rx="3.5" fill="rgba(255,255,255,.7)" opacity=".4"/><rect x="410" y="190" width="26" height="16" rx="8" fill="rgba(255,255,255,.2)"/></g><path class="c-draw" d="M250 300c14-28 30 8 44-8s20-30 34-6 18 14 32-4 20-16 34 2 18 10 40-6" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/><rect x="250" y="316" width="190" height="1.5" fill="rgba(255,255,255,.35)"/></svg></span><span class="c-title">Austa Clínicas<small data-en="Scheduling, consultations and digital signature">Agendamento, consulta e assinatura digital</small></span></div>
+        <span class="view-cursor" aria-hidden="true"><span data-en="View project">Ver projeto</span> <i>→</i></span>
+      </a>
     </section>
-
   </main>
 
-  <footer class="thanks-block" data-bg="#000000">
-    <h2 class="title big"><span class="line"><span data-en="Thank you">Obrigado</span></span></h2>
-    <a class="link-thanks" href="mailto:contato.issafe@gmail.com">contato.issafe@gmail.com</a>
+  <!-- SOBRE -->
+  <section class="section" id="sobre" data-bg="#000000">
+    <div class="section-label reveal-block"><b data-en="About">Sobre</b><span>01</span></div>
+    <div class="about-grid">
+      <p class="kicker reveal-block" data-en="Hey!">Oi!</p>
+      <div class="about-body">
+        <h2 class="title mid">
+          <span class="line"><span data-en="Complex services,">Serviços complexos,</span></span>
+          <span class="line sub"><span data-en="made clear.">explicados com clareza.</span></span>
+        </h2>
+        <p class="reveal-block" data-en="I'm Felipe Santiago, a Senior Product Designer based in Goiânia, Brazil. I design accessible, scalable digital products for government, fintech, healthcare and SaaS — connecting research, interface design, accessibility and implementation to simplify services that need to work in the real world.">Sou Felipe Santiago, Senior Product Designer em Goiânia. Desenho produtos digitais acessíveis e escaláveis para governo, fintech, saúde e SaaS — conectando pesquisa, interface, acessibilidade e implementação para simplificar serviços que precisam funcionar no mundo real.</p>
+        <p class="reveal-block" data-en="I've worked in UX/UI since 2020, after starting out in mobile development with React and React Native. That technical background is why I care about Design Systems that hold up in code, not only in Figma, and about close collaboration with product and engineering.">Trabalho com UX/UI desde 2020, depois de começar em desenvolvimento mobile com React e React Native. Essa base técnica faz com que eu me importe com Design Systems que funcionam no código, não só no Figma, e com a colaboração próxima com produto e engenharia.</p>
+      </div>
+    </div>
+    <div class="numbers reveal-block">
+      <div><b>30+</b><span data-en="projects delivered">projetos entregues</span></div>
+      <div><b>23+</b><span data-en="digital systems for the Government of Goiás">sistemas digitais para o Governo de Goiás</span></div>
+      <div><b>2</b><span data-en="institutional Design Systems">Design Systems institucionais</span></div>
+      <div><b>2017</b><span data-en="the year I started working in tech">o ano em que comecei em tecnologia</span></div>
+    </div>
+  </section>
+
+  <!-- COMPETÊNCIAS -->
+  <section class="section" id="competencias" data-bg="#000000">
+    <div class="section-label reveal-block"><b data-en="Expertise">Competências</b><span>02</span></div>
+    <div class="skills reveal-block">
+      <div>
+        <h3>Product Design</h3>
+        <ul>
+          <li data-en="Discovery &amp; strategy">Discovery e estratégia</li>
+          <li data-en="User flows">Fluxos de usuário</li>
+          <li data-en="Interactive prototyping">Prototipação interativa</li>
+          <li data-en="Information architecture">Arquitetura da informação</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Design Systems</h3>
+        <ul>
+          <li data-en="Tokens &amp; components">Tokens e componentes</li>
+          <li data-en="Documentation &amp; handoff">Documentação e handoff</li>
+          <li data-en="Governance">Governança</li>
+          <li data-en="Design-to-code alignment">Alinhamento design–código</li>
+        </ul>
+      </div>
+      <div>
+        <h3>UX Research</h3>
+        <ul>
+          <li data-en="User interviews">Entrevistas com usuários</li>
+          <li data-en="Usability testing">Testes de usabilidade</li>
+          <li data-en="Heuristic analysis">Análise heurística</li>
+          <li data-en="Accessibility (WCAG)">Acessibilidade (WCAG)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-en="Complex platforms">Plataformas complexas</h3>
+        <ul>
+          <li>GovTech</li>
+          <li>Fintech</li>
+          <li data-en="Healthcare">Saúde</li>
+          <li>SaaS</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tools reveal-block">
+      <p data-en="Tools and technical base">Ferramentas e base técnica</p>
+      <span>Figma</span><span>Tokens Studio</span><span>HTML</span><span>CSS</span><span>React</span><span>React Native</span>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="section" id="experiencia" data-bg="#000000">
+    <div class="section-label reveal-block"><b data-en="Experience">Experiência</b><span>03</span></div>
+    <div class="xp">
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Nov 2024 – Aug 2026">nov 2024 – ago 2026</span>
+        <h3>Montreal<span class="role">Senior Software Design Engineer</span></h3>
+        <p data-en="Digital services for the Government of Goiás — AssinaGO, SISLOG, Portal Goiás and EAI.dev. Design System governance and evolution, interactive prototyping and implementation follow-up.">Serviços digitais do Governo de Goiás — AssinaGO, SISLOG, Portal Goiás e EAI.dev. Governança e evolução do Design System, prototipação interativa e acompanhamento da implementação.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Mar 2025 – Jun 2025">mar 2025 – jun 2025</span>
+        <h3>Brasil Card<span class="role">Senior Product Designer · Freelancer</span></h3>
+        <p data-en="Redesign of the Agile – Dinheiro na Hora app (sign-up, contracting and credit management journeys) and structuring of the Flex Design System.">Redesign do app Agile – Dinheiro na Hora (cadastro, contratação e gestão de crédito) e estruturação do Flex Design System.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Oct 2024 – Dec 2024">out 2024 – dez 2024</span>
+        <h3>Brivia<span class="role" data-en="User Experience Design Specialist">Especialista em User Experience Design</span></h3>
+        <p data-en="Journeys, information architecture and responsive interfaces for projects such as Feel Brasil / Embratur.">Jornadas, arquitetura da informação e interfaces responsivas para projetos como Feel Brasil / Embratur.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Jun 2024 – Nov 2024">jun 2024 – nov 2024</span>
+        <h3>Americas Health<span class="role">Senior Product Designer</span></h3>
+        <p data-en="Web and mobile experiences for Austa Clínicas, digital signature flows in Austa Sign and Data Hub interfaces.">Experiências web e mobile da Austa Clínicas, fluxos de assinatura digital no Austa Sign e interfaces do Data Hub.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Aug 2023 – Jun 2024">ago 2023 – jun 2024</span>
+        <h3>FitBank 450<span class="role">Principal Product Designer</span></h3>
+        <p data-en="Led the corporate Design System — tokens, components, interaction patterns and Figma libraries. Payments, Pix, transfers and multi-account journeys; UI library for EasyCrédito.">Liderança do Design System corporativo — tokens, componentes, padrões de interação e bibliotecas no Figma. Jornadas de pagamentos, Pix, transferências e múltiplas contas; biblioteca de interface do EasyCrédito.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Jun 2021 – May 2023">jun 2021 – mai 2023</span>
+        <h3>Gauge<span class="role">Product Designer</span></h3>
+        <p data-en="Projects for Itaú, Vivo, ApexBrasil, Goodyear and Suvinil — user interviews, needs analysis, information architecture and web and mobile journeys.">Projetos para Itaú, Vivo, ApexBrasil, Goodyear e Suvinil — entrevistas com usuários, análise de necessidades, arquitetura da informação e jornadas web e mobile.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Jan 2021 – Jun 2021">jan 2021 – jun 2021</span>
+        <h3>Husky by Nomad<span class="role">UX Designer</span></h3>
+        <p data-en="Journeys for receiving and managing international payments, with research, prototyping and product and engineering collaboration.">Jornadas de recebimento e gestão de pagamentos internacionais, com pesquisa, prototipação e colaboração com produto e engenharia.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when" data-en="Dec 2020 – Jan 2021">dez 2020 – jan 2021</span>
+        <h3>Auvo Tecnologia<span class="role" data-en="UX/UI Designer">UX/UI Designer Pleno</span></h3>
+        <p data-en="Sole designer on the product: requirements, flows, interfaces and prototypes.">Único designer do produto: levantamento de requisitos, fluxos, interfaces e protótipos.</p>
+      </div>
+      <div class="xp-row reveal-block">
+        <span class="when">2017 – 2020</span>
+        <h3><span data-en="Before design">Antes do design</span><span class="role" data-en="Mobile development &amp; IT">Desenvolvimento mobile e TI</span></h3>
+        <p data-en="Interfaces and features in React and React Native at Real Cultura Financeira and Instituto Bulla, and technical support at Emater Goiás.">Interfaces e funcionalidades em React e React Native na Real Cultura Financeira e no Instituto Bulla, e suporte técnico na Emater Goiás.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAÇÃO -->
+  <section class="section" id="formacao" data-bg="#000000">
+    <div class="section-label reveal-block"><b data-en="Education">Formação</b><span>04</span></div>
+    <div class="edu reveal-block">
+      <div>
+        <span class="when">2025</span>
+        <h3 data-en="Specialization in UX &amp; UI">Especialização em UX e UI</h3>
+        <p>Instituto Faculeste</p>
+      </div>
+      <div>
+        <span class="when">2023</span>
+        <h3 data-en="B.Sc. in Computer Science">Bacharelado em Ciência da Computação</h3>
+        <p data-en="Pontifical Catholic University of Goiás">Pontifícia Universidade Católica de Goiás</p>
+      </div>
+      <div>
+        <span class="when" data-en="Languages">Idiomas</span>
+        <h3 data-en="Portuguese · English">Português · Inglês</h3>
+        <p data-en="Native Portuguese, professional working English and limited working Spanish.">Português nativo, inglês profissional e espanhol básico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <footer class="contact" id="contato" data-bg="#000000">
+    <h2 class="title big">
+      <span class="line"><span data-en="Let's build">Vamos construir</span></span>
+      <span class="line sub"><span data-en="something useful.">algo útil.</span></span>
+    </h2>
+    <p class="lead anim-up" data-en="Have a product challenge, a complex workflow or a Design System that needs to scale? Send me a message.">Tem um desafio de produto, um fluxo complexo ou um Design System que precisa escalar? Me mande uma mensagem.</p>
+    <div class="mail-row anim-up d1">
+      <a class="mail" href="mailto:contato.issafe@gmail.com">contato.issafe@gmail.com</a>
+      <button class="copy-btn" type="button" data-copy="contato.issafe@gmail.com" data-en="Copy e-mail">Copiar e-mail</button>
+    </div>
+    <div class="links anim-up d2">
+      <a href="https://www.linkedin.com/in/thesantiagoux" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/felippeissa" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.behance.net/thesantiagoux" target="_blank" rel="noopener">Behance</a>
+    </div>
   </footer>
 
   <!-- ============ FIM da área de edição ============ -->
 
-  <script src="script.js?v=7"></script>
+  <div class="site-foot">
+    <span>© <span data-year>2026</span> Felipe Santiago · Goiânia, <span data-en="Brazil">Brasil</span></span>
+    <a href="#top" class="to-top" data-en="Back to top ↑">Voltar ao topo ↑</a>
+  </div>
+
+  <script src="script.js?v=8"></script>
 </body>
 </html>

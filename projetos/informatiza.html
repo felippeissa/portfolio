@@ -4,21 +4,30 @@
   <meta charset="utf-8">
   <script>try{var s=localStorage,t=s.getItem("theme"),l=s.getItem("lang");if(t)document.documentElement.dataset.theme=t;if(l==="en")document.documentElement.lang="en"}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Informatiza 3.0 · Felipe Santiago</title>
-  <meta name="description" content="Case: Design System Informatiza 3.0, Governo de Goiás">
+  <title data-en="Informatiza 3.0 — Felipe Santiago">Informatiza 3.0 — Felipe Santiago</title>
+  <meta name="description" content="Como alinhamos Figma, componentes, acessibilidade e código em uma única linguagem para os serviços digitais do Governo de Goiás." data-pt-content="Como alinhamos Figma, componentes, acessibilidade e código em uma única linguagem para os serviços digitais do Governo de Goiás." data-en-content="How we aligned Figma, components, accessibility and code into a single language for the Government of Goiás&#x27;s digital services.">
+  <link rel="canonical" href="https://felippeissa.github.io/portfolio/projetos/informatiza.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Felipe Santiago">
+  <meta property="og:title" content="Informatiza 3.0 — Felipe Santiago">
+  <meta property="og:description" content="Como alinhamos Figma, componentes, acessibilidade e código em uma única linguagem para os serviços digitais do Governo de Goiás.">
+  <meta property="og:url" content="https://felippeissa.github.io/portfolio/projetos/informatiza.html">
+  <meta property="og:image" content="https://felippeissa.github.io/portfolio/assets/informatiza-ds-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=7">
-  <link rel="stylesheet" href="../case.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=8">
+  <link rel="stylesheet" href="../case.css?v=8">
 </head>
 <body>
-
+  <a class="skip" href="#historia" data-en="Skip to the story">Pular para a história</a>
   <div class="bg" id="bg"></div>
 
-  <nav class="top">
+  <nav class="top" aria-label="Principal" data-pt-label="Principal" data-en-label="Main">
     <a href="../index.html">Felipe Santiago</a>
-      <span class="sep" aria-hidden="true"></span>
+    <span class="sep" aria-hidden="true"></span>
     <div class="ctrl" role="group" aria-label="Tema" data-en-label="Theme" data-pt-label="Tema">
       <button class="ctrl-btn" type="button" data-theme-set="light" aria-pressed="false" aria-label="Tema claro" data-en-label="Light theme" data-pt-label="Tema claro" title="Tema claro"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <button class="ctrl-btn" type="button" data-theme-set="dark" aria-pressed="true" aria-label="Tema escuro" data-en-label="Dark theme" data-pt-label="Tema escuro" title="Tema escuro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg></button>
@@ -30,38 +39,35 @@
   </nav>
   <a class="back" href="../index.html#trabalho" data-en="← Back to projects">← Voltar aos projetos</a>
 
-  <!-- ============ EDITE SÓ AQUI: a história do projeto ============ -->
+  <!-- ============ EDITE A PARTIR DAQUI ============
+       Cada texto em português tem a versão em inglês no atributo data-en="..." ao lado. -->
 
   <header class="case-hero" data-bg="#000000">
-    <p class="eyebrow anim-up" data-en="Government of Goiás · Montreal · 2025">Governo de Goiás · Montreal · 2025</p>
+    <p class="eyebrow anim-up" data-en="Government of Goiás · Montreal · 2025 – 2026">Governo de Goiás · Montreal · 2025 – 2026</p>
     <h1 class="title big">
       <span class="line"><span>Informatiza 3.0</span></span>
       <span class="line sub"><span data-en="A Design System for the State">Um Design System para o Estado</span></span>
     </h1>
-    <p class="lead anim-up" data-en="How we turned dozens of public systems, each with its own look, into a single accessible and documented language.">Como transformamos dezenas de sistemas públicos com visuais diferentes em uma única linguagem, acessível e documentada.</p>
+    <p class="lead anim-up d1" data-en="How we aligned Figma, components, accessibility and code into a single language for the Government of Goiás&#x27;s digital services.">Como alinhamos Figma, componentes, acessibilidade e código em uma única linguagem para os serviços digitais do Governo de Goiás.</p>
   </header>
 
   <div class="case-media reveal-block">
-    <video src="../assets/informatiza-ds.mp4" poster="../assets/informatiza-ds-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+    <video src="../assets/informatiza-ds.mp4" poster="../assets/informatiza-ds-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
   </div>
 
   <dl class="facts reveal-block">
-    <div><dt data-en="Role">Papel</dt><dd data-en="Senior Product Designer<br>Design System governance">Senior Product Designer<br>Governança do Design System</dd></div>
-    <div><dt data-en="Period">Período</dt><dd data-en="Mar 2025 – present">Mar 2025 – hoje</dd></div>
-    <div><dt data-en="Tools">Ferramentas</dt><dd data-en="Figma, Tokens Studio, variables and modes">Figma, Tokens Studio, variáveis e modos</dd></div>
+    <div><dt data-en="Role">Papel</dt><dd data-en="Senior Software Design Engineer&lt;br&gt;Design System lead">Senior Software Design Engineer<br>Liderança do Design System</dd></div>
+    <div><dt data-en="Period">Período</dt><dd data-en="Mar 2025 – Aug 2026">Mar 2025 – Ago 2026</dd></div>
+    <div><dt data-en="Scope">Escopo</dt><dd data-en="Tokens, components, documentation, templates and accessibility">Tokens, componentes, documentação, templates e acessibilidade</dd></div>
   </dl>
 
-  <!--
-    Cada capítulo é um bloco <section class="chapter">. Para criar outro, copie um inteiro.
-    Para colocar uma imagem: <figure><img src="../assets/arquivo.png" alt="descrição"><figcaption>Legenda</figcaption></figure>
-  -->
-
+  <div id="historia"></div>
   <section class="chapter reveal-block">
     <p class="num" data-en="01 — Context">01 — Contexto</p>
     <div>
       <h2 data-en="Many systems, no common language.">Muitos sistemas, nenhuma linguagem em comum.</h2>
-      <p data-en="[Write here: what the scenario looked like before. How many systems existed and which problems citizens faced.]">[Escreva aqui: como era o cenário antes. Quantos sistemas existiam e que problemas o cidadão enfrentava.]</p>
-      <p data-en="[E.g.: each of the State’s digital services had its own buttons, colors and patterns, which made the experience inconsistent and development slower.]">[Ex.: cada serviço digital do Estado tinha seus próprios botões, cores e padrões, o que deixava a experiência inconsistente e o desenvolvimento mais lento.]</p>
+      <p data-en="The Government of Goiás runs dozens of digital services, such as AssinaGO, SISLOG and Portal Goiás. Over time, the UI library in Figma and the components implemented in code evolved separately.">O Governo de Goiás mantém dezenas de serviços digitais, como AssinaGO, SISLOG e o Portal Goiás. Com o tempo, a biblioteca de interface no Figma e os componentes implementados em código evoluíram separadamente.</p>
+      <p data-en="The result was familiar: visual inconsistencies, decisions repeated on every project, handoff gaps and rework between design and engineering.">O resultado era conhecido: inconsistências visuais, decisões repetidas a cada projeto, lacunas no handoff e retrabalho entre design e engenharia.</p>
     </div>
   </section>
 
@@ -69,11 +75,11 @@
     <p class="num" data-en="02 — Challenge">02 — Desafio</p>
     <div>
       <h2 data-en="Scaling design in a government environment.">Escalar design em um ambiente de governo.</h2>
-      <p data-en="[Write here: what the goal was and which constraints applied — deadlines, front-end technology, mandatory accessibility.]">[Escreva aqui: qual era o objetivo e quais as restrições — prazos, tecnologia do front-end, acessibilidade obrigatória.]</p>
+      <p data-en="Build a foundation that could serve several products and teams at once, while respecting what was already in production.">Criar uma base que servisse vários produtos e equipes ao mesmo tempo, respeitando o que já estava em produção.</p>
       <ul>
-        <li data-en="[Constraint or goal 1]">[Restrição ou meta 1]</li>
-        <li data-en="[Constraint or goal 2]">[Restrição ou meta 2]</li>
-        <li data-en="[Constraint or goal 3]">[Restrição ou meta 3]</li>
+        <li data-en="Align Figma with the components that already existed in code, without disrupting live systems.">Alinhar o Figma aos componentes que já existiam em código, sem interromper sistemas em uso.</li>
+        <li data-en="Meet the accessibility criteria expected from public services.">Atender aos critérios de acessibilidade esperados de serviços públicos.</li>
+        <li data-en="Document the patterns so each team can apply them on its own.">Documentar os padrões para que cada equipe consiga aplicá-los com autonomia.</li>
       </ul>
     </div>
   </section>
@@ -82,9 +88,9 @@
     <p class="num" data-en="03 — Process">03 — Processo</p>
     <div>
       <h2 data-en="Tokens first, components later.">Tokens primeiro, componentes depois.</h2>
-      <p data-en="[Write here: how you started. Audit of existing interfaces, token definition (primitive → semantic → component), organization of the Figma libraries.]">[Escreva aqui: como vocês começaram. Auditoria das interfaces existentes, definição dos tokens (primitivo → semântico → componente), organização das bibliotecas no Figma.]</p>
-      <p data-en="[Tell a hard decision and why you chose that path.]">[Conte uma decisão difícil e por que vocês escolheram esse caminho.]</p>
-      <!-- <figure><img src="../assets/processo.png" alt=""><figcaption>Estrutura de tokens no Figma</figcaption></figure> -->
+      <p data-en="The work started with the foundations: color, typography, spacing and state tokens, organized in three layers — primitive, semantic and component. A component never uses a color directly: it points to a semantic token, which points to a primitive.">O trabalho começou pelos fundamentos: tokens de cor, tipografia, espaçamento e estados, organizados em três camadas — primitivo, semântico e componente. Um componente nunca usa uma cor diretamente: ele aponta para um token semântico, que aponta para o primitivo.</p>
+      <p data-en="In parallel, I standardized the Figma files and libraries and guided the team on how to organize and use the patterns. That way, a design decision changes in a single place and propagates across the whole system.">Em paralelo, padronizei os arquivos e as bibliotecas no Figma e orientei a equipe sobre como organizar e usar os padrões. Assim, uma mudança de decisão é feita em um único lugar e se propaga para todo o sistema.</p>
+      <figure><img src="../assets/informatiza/tokens-arquitetura.jpg" alt="Arquitetura de tokens: um token semântico de foco alimenta todos os componentes interativos, com um valor para cada tema." loading="lazy"><figcaption data-en="Token architecture: one semantic focus token feeds every interactive component, with a value for each theme.">Arquitetura de tokens: um token semântico de foco alimenta todos os componentes interativos, com um valor para cada tema.</figcaption></figure>
     </div>
   </section>
 
@@ -92,41 +98,53 @@
     <p class="num" data-en="04 — Solution">04 — Solução</p>
     <div>
       <h2 data-en="Documented, ready-to-use components.">Componentes documentados e prontos para uso.</h2>
-      <p data-en="[Write here: what was delivered. Components with guidelines, examples and tokens; screen templates; breakpoints; header, sidebar and mega menu patterns.]">[Escreva aqui: o que foi entregue. Componentes com diretrizes, exemplos e tokens; templates de telas; breakpoints; padrões de header, sidebar e mega menu.]</p>
-      <p data-en="[Show a concrete example: a component before and after, or how the DS was used to ship a new system.]">[Mostre um exemplo concreto: um componente antes e depois, ou como o DS foi usado para entregar um sistema novo.]</p>
-    </div>
-  </section>
-
-  <section class="chapter reveal-block">
-    <p class="num" data-en="05 — Accessibility">05 — Acessibilidade</p>
-    <div>
-      <h2 data-en="Accessible by default, not by exception.">Acessível por padrão, não por exceção.</h2>
-      <p data-en="[Write here: the three themes (light, dark and high contrast), WCAG AA contrast, visible focus documentation and minimum target size.]">[Escreva aqui: os três temas (claro, escuro e alto contraste), contraste WCAG AA, documentação de foco visível e área acionável mínima.]</p>
+      <p data-en="Each component has its own Figma page, with variants, states, usage examples and the tokens it is made of. On top of them we built layout patterns — header, sidebar, mega menu and data table — and screen templates to speed up new systems.">Cada componente tem uma página própria no Figma, com variações, estados, exemplos de uso e os tokens que o compõem. Sobre eles foram montados padrões de layout — header, sidebar, mega menu e data table — e templates de telas para acelerar novos sistemas.</p>
+      <p data-en="Behaviors are documented next to each component too: how the sidebar behaves when collapsed or with search, how the table shows status and actions, how each screen adapts to the breakpoints.">Os comportamentos também ficam documentados junto do componente: como o sidebar se comporta recolhido ou com busca, como a tabela mostra status e ações, como cada tela se adapta aos breakpoints.</p>
+      <div class="fig-pair"><figure><img src="../assets/informatiza/sidebar.jpg" alt="Comportamentos do sidebar documentados com exemplos navegáveis." loading="lazy"><figcaption data-en="Sidebar behaviors documented with clickable examples.">Comportamentos do sidebar documentados com exemplos navegáveis.</figcaption></figure><figure><img src="../assets/informatiza/datatable.jpg" alt="Data table com padrões de consulta, tags de status e ações." loading="lazy"><figcaption data-en="Data table with query patterns, status tags and actions.">Data table com padrões de consulta, tags de status e ações.</figcaption></figure></div>
     </div>
   </section>
 
   <section class="stats reveal-block">
-    <div><b>86</b><span data-en="documented components">componentes documentados</span></div>
+    <div><b>86</b><span data-en="documented component pages">páginas de componentes documentados</span></div>
     <div><b>4.839</b><span data-en="tokens in Figma">tokens no Figma</span></div>
     <div><b>3</b><span data-en="themes: light, dark and high contrast">temas: claro, escuro e alto contraste</span></div>
     <div><b>118</b><span data-en="screen templates">templates de telas</span></div>
   </section>
 
   <section class="chapter reveal-block">
-    <p class="num" data-en="06 — Results and learnings">06 — Resultados e aprendizados</p>
+    <p class="num" data-en="05 — Accessibility">05 — Acessibilidade</p>
     <div>
-      <h2 data-en="What changed.">O que mudou.</h2>
-      <p data-en="[Write here: real impact — systems that adopted the DS, time saved, what you would do differently.]">[Escreva aqui: impacto real — sistemas que adotaram o DS, tempo economizado, o que você faria diferente.]</p>
+      <h2 data-en="Accessible by default, not by exception.">Acessível por padrão, não por exceção.</h2>
+      <p data-en="The system has three themes — light, dark and high contrast — built on the same tokens. A good example of how this changes the details is the focus indicator, essential for keyboard users.">O sistema tem três temas — claro, escuro e alto contraste — construídos sobre os mesmos tokens. Um bom exemplo de como isso muda os detalhes é o indicador de foco, essencial para quem navega pelo teclado.</p>
+      <div class="compare"><div><h3 data-en="Before — legacy">Antes — legado</h3><ul><li data-en="1px thick">Espessura de 1px</li><li data-en="Color tied to the brand (primary 600)">Cor atrelada à marca (primary 600)</li><li data-en="No offset: it collided with the border">Sem offset: colava na borda</li><li data-en="Not WCAG conformant">Não conforme à WCAG</li></ul></div><div><h3 data-en="After — Informatiza 3.0">Depois — Informatiza 3.0</h3><ul><li data-en="2px thick">Espessura de 2px</li><li data-en="4px offset, breathing room from the border">Offset de 4px, com respiro da borda</li><li data-en="Neutral color per theme: neutral 900, neutral 100 and yellow 500">Cor neutra por tema: neutral 900, neutral 100 e yellow 500</li><li data-en="Conformant with WCAG AA">Conforme à WCAG AA</li></ul></div></div>
+      <figure><img src="../assets/informatiza/foco-antes-depois.jpg" alt="Documentação do focus ring: configuração legada e nova configuração lado a lado." loading="lazy"><figcaption data-en="Focus ring documentation: legacy and new configuration side by side.">Documentação do focus ring: configuração legada e nova configuração lado a lado.</figcaption></figure>
+      <figure><img src="../assets/informatiza/foco-temas.jpg" alt="O mesmo token de foco se adapta aos temas claro, escuro e alto contraste." loading="lazy"><figcaption data-en="The same focus token adapts to the light, dark and high contrast themes.">O mesmo token de foco se adapta aos temas claro, escuro e alto contraste.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="chapter reveal-block">
+    <p class="num" data-en="06 — Outcome">06 — Resultado</p>
+    <div>
+      <h2 data-en="A shared foundation for the State.">Uma base comum para o Estado.</h2>
+      <p data-en="Informatiza 3.0 gives the Government of Goiás&#x27;s systems a common starting point: shared tokens, documented components and screen templates, instead of decisions remade on every project.">O Informatiza 3.0 oferece aos sistemas do Governo de Goiás um ponto de partida comum: tokens compartilhados, componentes documentados e templates de telas, em vez de decisões refeitas a cada projeto.</p>
+      <p data-en="&lt;strong&gt;What I learned:&lt;/strong&gt; in a government Design System, governance matters as much as components. Standardizing files, documenting the why behind decisions and guiding the team is what keeps the system alive after delivery."><strong>O que aprendi:</strong> em um Design System de governo, governança importa tanto quanto componentes. Padronizar arquivos, documentar o porquê das decisões e orientar a equipe é o que mantém o sistema vivo depois da entrega.</p>
     </div>
   </section>
 
   <footer class="next" data-bg="#000000">
-    <p data-en="Next">Próximo</p>
-    <a href="../index.html#trabalho" data-en="← See all projects">← Ver todos os projetos</a>
+    <p data-en="Next project">Próximo projeto</p>
+    <a class="next-title" href="portal-goias.html">Portal Goiás <span>→</span></a>
+    <br>
+    <a class="all" href="../index.html#trabalho" data-en="← See all projects">← Ver todos os projetos</a>
   </footer>
 
   <!-- ============ FIM da área de edição ============ -->
 
-  <script src="../script.js?v=7"></script>
+  <div class="site-foot">
+    <span>© <span data-year>2026</span> Felipe Santiago</span>
+    <a href="mailto:contato.issafe@gmail.com">contato.issafe@gmail.com</a>
+  </div>
+
+  <script src="../script.js?v=8"></script>
 </body>
 </html>
