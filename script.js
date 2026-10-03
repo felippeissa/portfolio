@@ -11,10 +11,23 @@ const reveal = new IntersectionObserver((entries) => {
       reveal.unobserve(e.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
 
-document.querySelectorAll('.hero, .case-hero, .intro, .media, .contact, .thanks-block, .anim-up, .title, .reveal-block')
-  .forEach(el => reveal.observe(el));
+let pending = [...document.querySelectorAll('.hero, .case-hero, .intro, .media, .contact, .thanks-block, .anim-up, .title, .reveal-block')];
+pending.forEach(el => reveal.observe(el));
+
+// Garantia: se o observador não disparar (aba em segundo plano, navegador antigo),
+// revela pela posição na rolagem.
+function revealByScroll() {
+  if (!pending.length) return;
+  const limit = innerHeight * 0.92;
+  pending = pending.filter(el => {
+    if (el.classList.contains('in-view')) return false;
+    const r = el.getBoundingClientRect();
+    if (r.top < limit && r.bottom > 0) { el.classList.add('in-view'); return false; }
+    return true;
+  });
+}
 
 // 2) Fundo fixo: cor muda conforme a seção que está no centro da tela.
 //    No tema claro, cada cor escura vira um tom claro equivalente.
@@ -86,6 +99,7 @@ let lastY = scrollY;
 
 function onScroll() {
   const vh = innerHeight;
+  revealByScroll();
   if (work && indicator && progress) {
     const r = work.getBoundingClientRect();
     const visible = r.top < vh * 0.4 && r.bottom > vh * 0.6;
